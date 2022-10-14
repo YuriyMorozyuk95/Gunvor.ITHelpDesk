@@ -1,4 +1,6 @@
-﻿namespace ITHelpDesk;
+﻿using Telerik.Maui.Controls.Compatibility;
+
+namespace ITHelpDesk;
 
 public static class MauiProgram
 {
@@ -7,6 +9,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseTelerik()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
