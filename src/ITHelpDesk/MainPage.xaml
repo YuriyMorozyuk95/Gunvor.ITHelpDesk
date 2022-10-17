@@ -5,6 +5,11 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
 	Background="#0f2223">
+	<ContentPage.Resources>
+		<Color x:Key="EntryBackground">#0a1718</Color>
+		<Color x:Key="TextColor">#effcfd</Color>
+		<Color x:Key="BtnColor">#295b61</Color>
+	</ContentPage.Resources>
 
 	<ScrollView>
 		<VerticalStackLayout
@@ -20,23 +25,25 @@
 
 			<Entry
 				x:Name="NumberEntry"
-				BackgroundColor="#0a1718"
+				BackgroundColor="{StaticResource EntryBackground}"
 				FontSize="18"
 				HorizontalOptions="Center"
+				IsReadOnly="True"
 				Keyboard="Numeric"
 				SemanticProperties.Description="Welcome to dot net Multi platform App U I"
 				SemanticProperties.HeadingLevel="Level2"
 				Text="3213232143"
-				TextColor="#effcfd" />
+				TextColor="{StaticResource TextColor}" />
 
 			<telerik:RadButton
-				BackgroundColor="#295b61"
+				x:Name="Btn"
+				BackgroundColor="{StaticResource BtnColor}"
 				Clicked="RadButton_Clicked"
 				CornerRadius="120"
 				FontSize="Medium"
 				HeightRequest="240"
 				Text="Call to IT Help Desk"
-				TextColor="#effcfd"
+				TextColor="{StaticResource TextColor}"
 				WidthRequest="240" />
 
 		</VerticalStackLayout>
